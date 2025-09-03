@@ -1,0 +1,21 @@
+.parent {
+  width: 600px;
+  border: 2px solid black;
+  padding: 10px;
+}
+
+.box {
+  margin: 10px 0;
+  padding: 5px;
+  border: 1px solid gray;
+  background: lightblue;
+}
+
+.length { width: 300px; }
+.percent { width: 50%; }
+.auto { width: auto; }
+.max { width: max-content; }
+.min { width: min-content; }
+.fit { width: fit-content(200px); }
+.calc { width: calc(100% - 50px); }
+.clamp { width: clamp(150px, 40%, 400px); }
