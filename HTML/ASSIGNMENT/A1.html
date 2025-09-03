@@ -4,221 +4,87 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>CosmicCoder's_Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary-color: #2c3e50;
-      --secondary-color: #3498db;
-      --bg-color: #f4f6f8;
-      --text-color: #2c3e50;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Roboto', sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-    }
-
-    header {
-      background-color: rgba(254, 199, 0, 0.315);
-      padding: 2rem;
-      text-align: center;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-
-    .profile-photo {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid var(--secondary-color);
-    }
-
-    h1 {
-      margin: 1rem 0 0.5rem;
-      font-size: 2rem;
-    }
-
-    h2 {
-      color: var(--secondary-color);
-      margin-bottom: 2rem;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 2rem;
-    }
-
-    section {
-      margin-bottom: 3rem;
-    }
-
-    .section-title {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      border-bottom: 2px solid var(--secondary-color);
-      padding-bottom: 0.5rem;
-    }
-
-    .skills-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .skill {
-      background-color: white;
-      border: 1px solid #ccc;
-      padding: 8px 16px;
-      border-radius: 20px;
-      font-size: 0.9rem;
-    }
-
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .project {
-      background-color: white;
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    }
-
-    .project h3 {
-      margin-top: 0;
-      color: var(--primary-color);
-    }
-
-    .contact-info {
-      background-color: white;
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: #eaeaea;
-      font-size: 0.9rem;
-    }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 1.5rem;
-      }
-      h2 {
-        font-size: 1.2rem;
-      }
-    }
-  </style>
 </head>
 <body>
 
-  <header>
-    <img src="1756349121100.png" alt="Profile Photo" class="profile-photo">
+  <header style="text-align:center; padding:20px;">
+    <img src="1756349121100.png" alt="Profile Photo" width="120" height="120" style="border-radius:50%;">
     <h1>Abhinav Yadav</h1>
     <h2>Web Developer | Software Engineer | UI/UX Designer</h2>
   </header>
 
-  <div class="container">
-
+  <main style="max-width:700px; margin:auto; padding:10px;">
     <section>
-      <div class="section-title">About Me</div>
+      <h3>About Me</h3>
       <p>Hello! I'm a college student and a passionate coder, eager to learn and grow in the field of web development and software engineering.
         Currently, I am focused on enhancing my skills in full-stack development and exploring new technologies.</p>
     </section>
 
     <section>
-      <div class="section-title">Skills</div>
-      <div class="skills-list">
-        <div class="skill">HTML</div>
-        <div class="skill">CSS</div>
-        <div class="skill">JavaScript</div>
-        <div class="skill">C-Programming</div>
-        <div class="skill">Python</div>
-        <div class="skill">Oracle</div>
-        <div class="skill">Git</div>
-        <div class="skill">SQL</div>
-      </div>
+      <h3>Skills</h3>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>C-Programming</li>
+        <li>Python</li>
+        <li>Oracle</li>
+        <li>Git</li>
+        <li>SQL</li>
+      </ul>
     </section>
 
     <section>
-      <div class="section-title">Education</div>
-      <table style="width:100%; background:white; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.05); border-collapse:collapse; margin-bottom:2rem;">
-        <thead>
-          <tr style="background-color: #f4f6f8;">
-            <th style="padding:10px; border-bottom:1px solid #ccc; text-align:left;">Qualification</th>
-            <th style="padding:10px; border-bottom:1px solid #ccc; text-align:left;">Institution</th>
-            <th style="padding:10px; border-bottom:1px solid #ccc; text-align:left;">Year</th>
-            <th style="padding:10px; border-bottom:1px solid #ccc; text-align:left;">Score</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td style="padding:10px;">Computer Science Engineering</td>
-            <td style="padding:10px;">GLA UNIVERSITY</td>
-            <td style="padding:10px;">2024-2028</td>
-            <td style="padding:10px;">Currently Pursuing</td>
-          </tr>
-          <tr>
-            <td style="padding:10px;">Class XII</td>
-            <td style="padding:10px;">S.B.R.L. Academy Mainpuri</td>
-            <td style="padding:10px;">2023</td>
-            <td style="padding:10px;">73%</td>
-          </tr>
-          <tr>
-            <td style="padding:10px;">Class X</td>
-            <td style="padding:10px;">S.B.R.L. Academy Mainpuri</td>
-            <td style="padding:10px;">2021</td>
-            <td style="padding:10px;">89%</td>
-          </tr>
-        </tbody>
+      <h3>Education</h3>
+      <table border="1" cellpadding="6" cellspacing="0" style="width:100%; border-collapse:collapse;">
+        <tr>
+          <th>Qualification</th>
+          <th>Institution</th>
+          <th>Year</th>
+          <th>Score</th>
+        </tr>
+        <tr>
+          <td>Computer Science Engineering</td>
+          <td>GLA UNIVERSITY</td>
+          <td>2024-2028</td>
+          <td>Currently Pursuing</td>
+        </tr>
+        <tr>
+          <td>Class XII</td>
+          <td>S.B.R.L. Academy Mainpuri</td>
+          <td>2023</td>
+          <td>73%</td>
+        </tr>
+        <tr>
+          <td>Class X</td>
+          <td>S.B.R.L. Academy Mainpuri</td>
+          <td>2021</td>
+          <td>89%</td>
+        </tr>
       </table>
     </section>
 
-       <section>
-      <div class="section-title">Hobbies</div>
-      <div class="projects">
-        <div class="project">
-          <h3>Reading Tech Blogs</h3>
-          <p>I enjoy staying updated with the latest trends in technology and software development by reading blogs and articles.</p>
-        </div>
-        <div class="project">
-          <h3>Playing Games</h3>
-          <p>I enjoy playing video games as a way to relax and unwind.</p>
-        </div>
-        <div class="project">
-          <h3>Photography</h3>
-          <p>I love capturing moments and exploring creative perspectives through photography.</p>
-        </div>
-        <div class="project">
-          <h3>Traveling</h3>
-          <p>Traveling allows me to experience new cultures and broaden my horizons.</p>
-        </div>
-      </div>
-    </section>
-        
-      </div>
+    <section>
+      <h3>Hobbies</h3>
+      <ul>
+        <li><strong>Reading Tech Blogs:</strong> I enjoy staying updated with the latest trends in technology and software development by reading blogs and articles.</li>
+        <li><strong>Playing Games:</strong> I enjoy playing video games as a way to relax and unwind.</li>
+        <li><strong>Photography:</strong> I love capturing moments and exploring creative perspectives through photography.</li>
+        <li><strong>Traveling:</strong> Traveling allows me to experience new cultures and broaden my horizons.</li>
+      </ul>
     </section>
 
     <section>
-      <div class="section-title">Contact me</div>
-      <div class="contact-info">
-        <p><strong>Email:</strong> <a href="mailto:k.avhi4612@gmail.com" target="_blank">Wana hire me</a></p>
-        <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/abhiyadavv07" target="_blank">Lets Connect</a></p>
-        <p><strong>GitHub:</strong> <a href="https://github.com/CosmicCoder07" target="_blank">CosmicCoder This Side</a></p>
-      </div>
+      <h3>Contact me</h3>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:k.avhi4612@gmail.com" target="_blank">Wana hire me</a></li>
+        <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/abhiyadavv07" target="_blank">Lets Connect</a></li>
+        <li><strong>GitHub:</strong> <a href="https://github.com/CosmicCoder07" target="_blank">CosmicCoder This Side</a></li>
+      </ul>
     </section>
+  </main>
 
-  </div>
-
-  <footer>
+  <footer style="text-align:center; padding:10px; font-size:0.9rem;">
     &copy; 2025 CosmicCoder. All rights reserved.
   </footer>
 
