@@ -153,7 +153,7 @@ ul.values li::marker {
   padding: 26px 22px 22px;
   border-radius: 16px;
   background: linear-gradient(180deg, #ffffff, #fbfbfe);
-  border: 1px solid var(--line);
+  border: 1px solid var(--  line);
 }
 /* Decorative corner ribbon (pseudo-element) */
 .member::before {
