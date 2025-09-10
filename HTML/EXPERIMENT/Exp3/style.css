@@ -126,7 +126,7 @@
       background: var(--danger);
       color: #fff;
       border: none;
-      border-radius: 8px;
+      border-radius: 10px;
       cursor: pointer;
       font-weight: bold;
       transition: background 0.3s;
@@ -146,8 +146,8 @@
 
     .blog-card {
       background: var(--card-bg);
-      border-radius: 100px;
-      box-shadow: 0 30px 15px rgba(0,0,0,0.1);
+      border-radius: 18px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       flex: 1;
       min-width: 280px;
       max-width: 32%;
@@ -193,7 +193,7 @@
       background: #16a085;
     }
 
-    /* ===== Hide sidebar when .hidden class is added ===== */
+   
     .sidebar.hidden {
       display: none;
     }
