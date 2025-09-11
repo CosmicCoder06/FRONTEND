@@ -132,10 +132,7 @@
       transition: background 0.3s;
     }
 
-    .buy-btn:hover {
-      background: #e85a4f;
-    }
-
+  
     /* ===== Blog Layout ===== */
     .blog-grid {
       display: flex;
