@@ -1,12 +1,12 @@
 :root {
-  --ink: #1e293b; /* primary text */
-  --muted: #64748b; /* secondary text */
-  --bg: #f6f7fb; /* page bg */
-  --card: #ffffff; /* card bg */
-  --line: #e8ebf2; /* separators */
-  --brand: #2b6cb0; /* royal blue */
-  --accent: #8b5cf6; /* soft violet */
-  --gold: #c9a227; /* luxery accent */
+  --ink: #1e293b; 
+  --muted: #64748b; 
+  --bg: #a1b7f4; 
+  --card: #ffffff; 
+  --line: #e8ebf2; 
+  --brand: #2b6cb0;
+  --accent: #8b5cf6;
+  --gold: #c9a227;
 }
 
 body {
@@ -41,6 +41,8 @@ p {
   color: #fff;
   background: linear-gradient(to bottom, #0f172a, #1e3a8a, #4338ca);
   overflow: hidden;
+  border-bottom-left-radius: 500%;
+  border-bottom-right-radius: 500%;
 }
 
 #about-header::after {
@@ -120,7 +122,7 @@ a[target="_blank"] {
   text-decoration: none;
   border-bottom: 1px solid rgba(43, 108, 176, 0.3);
 }
-/* External link arrow via pseudo-element */
+
 a[target="_blank"]::after {
   content: " ↗";
   font-weight: 600;
