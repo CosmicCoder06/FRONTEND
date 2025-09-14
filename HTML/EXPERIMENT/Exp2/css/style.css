@@ -118,7 +118,7 @@ p {
 
 a[target="_blank"] {
   color: var(--brand);
-  font-weight: 600;
+  font-weight: 600; 
   text-decoration: none;
   border-bottom: 1px solid rgba(43, 108, 176, 0.3);
 }
