@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    form {
+      background-color: #fff;
+      max-width: 400px;
+      margin: auto;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="file"],
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    input[type="radio"] {
+      margin-right: 5px;
+    }
+
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+    input {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Registration Form</h2>
+
+  <form>
+
+    Name: <br>
+    <input type="text" name="name">
+
+    Email: <br>
+    <input type="email" name="email">
+
+    Password: <br>
+    <input type="password" name="password"><br>
+
+    Upload File: <br>
+    <input type="file" name="file"><br>
+
+    Gender: <br>
+    <input type="radio" name="gender" value="male"> Male
+    <input type="radio" name="gender" value="female"> Female <br><br>
+
+    Country: <br>
+    <select name="country">
+      <option>--Select--</option>
+      <option value="india">India</option>
+      <option value="usa">USA</option>
+      <option value="uk">UK</option>
+    </select><br><br>
+
+    <input type="submit" value="Submit">
+
+  </form>
+
+</body>
+</html>
+
