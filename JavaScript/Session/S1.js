@@ -29,10 +29,34 @@
 // const hisAge = "age";
 // console.log(person[hisAge]);
 
-const person = {
-    firstName : "Nitin",
-    lastName : "Sharma",
-    age : 121,
-};
+// const person = {
+//     firstName : "Nitin",
+//     lastName : "Sharma",
+//     age : 121,
+// };
 
-person.birthyear = 2025 - person.age;
+// person.birthyear = 2025 - person.age;
+
+// person.birth = function (){
+//     console.log(`Hey my birthyear is ${this.birthyear}`);
+// };
+
+// person.birth();
+
+// const fruits = ["apple" , "Banana" , "Kiwi" , "Mango" , "Grappes"];
+// const [,secondFruit, , ,fifthFruit] = fruits;
+
+// console.log(fruits);
+
+
+let count = 10;
+
+const interval = setInterval(() => {
+    console.log(count);
+    count--;
+
+    if (count < 0) {
+        clearInterval(interval);
+        console.log("!!!!! BOOM !!!!!");
+    }
+}, 1000)0;
