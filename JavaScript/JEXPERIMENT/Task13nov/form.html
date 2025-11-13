@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simple Form</title>
+  <link rel="stylesheet" href="form.css" />
+</head>
+<body>
+  <main class="card">
+      <div class="logo-box">
+        <img src="https://res.cloudinary.com/vistaprint/images/c_scale,w_448,h_448,dpr_2/f_auto,q_auto/v1706191816/ideas-and-advice-prod/blogadmin/Screenshot-2024-01-25-at-15.09.28/Screenshot-2024-01-25-at-15.09.28.png?_i=AA" alt="Company Logo" class="logo">
+      </div>
+    <h1>Company Form</h1>
+
+    <div id="status" aria-live="polite" style="display:none"></div>
+
+    <form id="CompanyDetailsForm" novalidate>
+      <div>
+        <label for="name">Company Name</label>
+        <input id="name" name="name" type="text" placeholder="Enter Your Company Name" required />
+      </div>
+
+      <div>
+        <label for="Moto">Company Moto</label>
+        <input id="Moto" name="Moto" type="text" placeholder="What's Your Company's Moto" required />
+      </div>
+
+      <button id="submitBtn" class="btn" type="submit">Submit</button>
+    </form>
+  </main>
+
+  <script src="form.js"></script>
+</body>
+</html>
