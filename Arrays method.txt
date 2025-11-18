@@ -1,7 +1,0 @@
-Arrays method
-string and maths method
-first three event are ultra most important
-
-IMPORTANT FOR CBT
-
-form with event handling 
