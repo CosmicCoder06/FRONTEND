@@ -1,13 +1,13 @@
-function checkAge(age) {
+// function checkAge(age) {
 
-     n = age;
+//      n = age;
 
-    if (n >= 13 && n <= 19) {
-        console.log('Teenager');
-    } else {
-        console.log('Not a Teenager');
-    }
-}
+//     if (n >= 13 && n <= 19) {
+//         console.log('Teenager');
+//     } else {
+        // console.log('Not a Teenager');
+//     }
+// }
 
 
 // checkAge(19);

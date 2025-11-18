@@ -49,14 +49,14 @@
 // console.log(fruits);
 
 
-let count = 10;
+// let count = 10;
 
-const interval = setInterval(() => {
-    console.log(count);
-    count--;
+// const interval = setInterval(() => {
+//     console.log(count);
+//     count--;
 
-    if (count < 0) {
-        clearInterval(interval);
-        console.log("!!!!! BOOM !!!!!");
-    }
-}, 1000)0;
+//     if (count < 0) {
+//         clearInterval(interval);
+//         console.log("!!!!! BOOM !!!!!");
+//     }
+// }, 1000)0;
