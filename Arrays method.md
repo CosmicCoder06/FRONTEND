@@ -24,17 +24,17 @@ This is different from normal inheritance as their child class was inheriting fr
 
 
 
-
-
-
-
-
-
-
-
 * CALL APPLY AND BIND
 
+####
 
+Arrays method
+string and maths method
+first three event are ultra most important
+
+IMPORTANT FOR CBT
+
+form with event handling 
 
 
 
