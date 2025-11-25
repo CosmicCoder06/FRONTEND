@@ -1,5 +1,4 @@
-<!-- Task 2: Random Joke Generator
-Objective: Understand Promises and UI updates dynamically. -->
+<!-- Task 2: Random Joke Generator-->
 
 <!DOCTYPE html>
 <html>
@@ -7,7 +6,7 @@ Objective: Understand Promises and UI updates dynamically. -->
   <title>Random Joke Generator</title>
   <meta charset="utf-8">
   <style>
-    body { font-family: Arial; max-width: 600px; margin: 30px auto; text-align: center; }
+    body { font-family: Arial; max-width: 600px; margin: 200px auto; text-align: center; background-color: lightgoldenrodyellow; }
     #jokeBox { margin-top: 20px; font-size: 18px; }
     button { padding: 10px 15px; margin-top: 20px; font-size: 16px; }
   </style>
@@ -15,9 +14,9 @@ Objective: Understand Promises and UI updates dynamically. -->
 <body>
   <h2>Random Joke Generator</h2>
 
-  <div id="jokeBox">Click the button to get a joke!</div>
+  <div id="jokeBox">Click below to start</div>
 
-  <button id="btn" onclick="getJoke()">Next Joke</button>
+  <button id="btn" onclick="getJoke()">Start</button>
 
   <script>
     async function getJoke() {
@@ -39,7 +38,7 @@ Objective: Understand Promises and UI updates dynamically. -->
         console.error(err);
       } finally {
         btn.disabled = false;
-        btn.textContent = 'Next Joke';
+        btn.textContent = 'Dil Maange More';
       }
     }
 

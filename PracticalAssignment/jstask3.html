@@ -1,5 +1,4 @@
-<!-- Task 3: Weather Information App
-Objective: Combine API fetching and async functions with DOM manipulation. -->
+<!-- Task 3: Weather Information App -->
 
 <!DOCTYPE html>
 <html>
@@ -7,18 +6,19 @@ Objective: Combine API fetching and async functions with DOM manipulation. -->
   <title>Weather App</title>
   <meta charset="utf-8" />
   <style>
-    body { font-family: Arial; max-width: 600px; margin: 30px auto; text-align: center; }
+    body { font-family: Arial; max-width: 600px; margin: 200px auto; text-align: center; background-color: lightcoral; }
+
     input { padding: 8px; width: 60%; font-size: 16px; }
     button { padding: 8px 12px; font-size: 16px; margin-left: 5px; }
     #result { margin-top: 20px; font-size: 18px; }
-    #error { margin-top: 10px; color: red; font-weight: bold; }
+    #error { margin-top: 10px; color: rgb(4, 16, 249); font-weight: bold; }
   </style>
 </head>
 <body>
   <h2>Weather Information App</h2>
 
-  <input id="city" type="text" placeholder="Enter city name" />
-  <button onclick="getWeather()">Get Weather</button>
+  <input id="city" type="text" placeholder="Enter your city name" />
+  <button onclick="getWeather()">Get info</button>
 
   <div id="error"></div>
   <div id="result"></div>
@@ -37,14 +37,14 @@ Objective: Combine API fetching and async functions with DOM manipulation. -->
         return;
       }
 
-      const API_KEY = "5fd1f4ed6a42e9c1f2b0de5c6212bcf6"; // replace with your valid key if needed
+      const API_KEY = "5fd1f4ed6a42e9c1f2b0de5c6212bcf6"; 
 
       try {
         const url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&appid=${API_KEY}&units=metric`;
         const res = await fetch(url);
 
         if (!res.ok) {
-          // try to parse message from API, otherwise generic message
+          
           const errData = await res.json().catch(() => ({}));
           const msg = errData.message ? errData.message : 'City not found or API error.';
           error.textContent = msg;

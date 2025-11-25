@@ -1,12 +1,11 @@
-<!-- Task 3: Image Carousel
-Objective: Learn timed DOM updates and event-driven manipulation.-->
+<!-- Task 3: Image Carousel-->
 
 <!DOCTYPE html>
 <html>
 <head>
   <title>Simple Image Carousel</title>
   <style>
-    body { font-family: Arial; text-align: center; padding: 20px; }
+    body { font-family: Arial; text-align: center; padding: 20px; background-color: darkkhaki;}
     #carousel {
       width: 400px;
       height: 250px;
@@ -64,18 +63,18 @@ Objective: Learn timed DOM updates and event-driven manipulation.-->
     }
 
     function startCarousel() {
-      interval = setInterval(nextImg, 3000); // auto-slide every 3 sec
+      interval = setInterval(nextImg, 3000); 
     }
 
     function stopCarousel() {
       clearInterval(interval);
     }
 
-    // Bonus: pause on hover
+    
     carousel.addEventListener("mouseover", stopCarousel);
     carousel.addEventListener("mouseout", startCarousel);
 
-    // Initial start
+    
     startCarousel();
   </script>
 </body>
