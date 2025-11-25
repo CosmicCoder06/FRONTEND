@@ -1,0 +1,70 @@
+<!-- Task 3: Weather Information App
+Objective: Combine API fetching and async functions with DOM manipulation. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Weather App</title>
+  <meta charset="utf-8" />
+  <style>
+    body { font-family: Arial; max-width: 600px; margin: 30px auto; text-align: center; }
+    input { padding: 8px; width: 60%; font-size: 16px; }
+    button { padding: 8px 12px; font-size: 16px; margin-left: 5px; }
+    #result { margin-top: 20px; font-size: 18px; }
+    #error { margin-top: 10px; color: red; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h2>Weather Information App</h2>
+
+  <input id="city" type="text" placeholder="Enter city name" />
+  <button onclick="getWeather()">Get Weather</button>
+
+  <div id="error"></div>
+  <div id="result"></div>
+
+  <script>
+    async function getWeather() {
+      const city = document.getElementById('city').value.trim();
+      const result = document.getElementById('result');
+      const error = document.getElementById('error');
+
+      result.innerHTML = "";
+      error.textContent = "";
+
+      if (!city) {
+        error.textContent = "Please enter a city name.";
+        return;
+      }
+
+      const API_KEY = "5fd1f4ed6a42e9c1f2b0de5c6212bcf6"; // replace with your valid key if needed
+
+      try {
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&appid=${API_KEY}&units=metric`;
+        const res = await fetch(url);
+
+        if (!res.ok) {
+          // try to parse message from API, otherwise generic message
+          const errData = await res.json().catch(() => ({}));
+          const msg = errData.message ? errData.message : 'City not found or API error.';
+          error.textContent = msg;
+          return;
+        }
+
+        const data = await res.json();
+
+        result.innerHTML = `
+          <p><strong>Location:</strong> ${data.name}, ${data.sys && data.sys.country ? data.sys.country : ''}</p>
+          <p><strong>Temperature:</strong> ${data.main.temp}°C</p>
+          <p><strong>Humidity:</strong> ${data.main.humidity}%</p>
+          <p><strong>Condition:</strong> ${data.weather[0].description}</p>
+        `;
+
+      } catch (err) {
+        error.textContent = "Error fetching weather. Please try again.";
+        console.error(err);
+      }
+    }
+  </script>
+</body>
+</html>

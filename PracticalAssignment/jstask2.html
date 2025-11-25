@@ -1,0 +1,57 @@
+<!-- Task 2: Random Joke Generator
+Objective: Understand Promises and UI updates dynamically. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random Joke Generator</title>
+  <meta charset="utf-8">
+  <style>
+    body { font-family: Arial; max-width: 600px; margin: 30px auto; text-align: center; }
+    #jokeBox { margin-top: 20px; font-size: 18px; }
+    button { padding: 10px 15px; margin-top: 20px; font-size: 16px; }
+  </style>
+</head>
+<body>
+  <h2>Random Joke Generator</h2>
+
+  <div id="jokeBox">Click the button to get a joke!</div>
+
+  <button id="btn" onclick="getJoke()">Next Joke</button>
+
+  <script>
+    async function getJoke() {
+      const btn = document.getElementById('btn');
+      const box = document.getElementById('jokeBox');
+
+      btn.disabled = true;
+      btn.textContent = 'Loading...';
+
+      try {
+        const res = await fetch('https://official-joke-api.appspot.com/random_joke');
+        if (!res.ok) throw new Error('Network response was not ok');
+        const data = await res.json();
+
+     
+        box.innerHTML = `<strong>${escapeHtml(data.setup)}</strong><br><br>${escapeHtml(data.punchline)}`;
+      } catch (err) {
+        box.textContent = 'Failed to load joke. Try again!';
+        console.error(err);
+      } finally {
+        btn.disabled = false;
+        btn.textContent = 'Next Joke';
+      }
+    }
+
+   
+    function escapeHtml(str) {
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+  </script>
+</body>
+</html>
