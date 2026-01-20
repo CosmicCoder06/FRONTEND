@@ -91,3 +91,52 @@
   </button>
 </body>
 </html>
+
+
+    <h2>Simple Calculator</h2>
+    <div class="calc">
+        <input type="text" id="display" disabled>
+
+        <br>
+        <input type="button" value="7" onclick="press('7')">
+        <input type="button" value="8" onclick="press('8')">
+        <input type="button" value="9" onclick="press('9')">
+        <input type="button" value="+" onclick="press('+')">
+
+        <br>
+        <input type="button" value="4" onclick="press('4')">
+        <input type="button" value="5" onclick="press('5')">
+        <input type="button" value="6" onclick="press('6')">
+        <input type="button" value="-" onclick="press('-')">
+
+        <br>
+        <input type="button" value="1" onclick="press('1')">
+        <input type="button" value="2" onclick="press('2')">
+        <input type="button" value="3" onclick="press('3')">
+        <input type="button" value="*" onclick="press('*')">
+
+        <br>
+        <input type="button" value="0" onclick="press('0')">
+        <input type="button" value="C" onclick="clearDisplay()">
+        <input type="button" value="=" onclick="calculate()">
+        <input type="button" value="/" onclick="press('/')">
+    </div>
+
+    <script>
+        function press(num) {
+            document.getElementById("display").value += num;
+        }
+        function clearDisplay() {
+            document.getElementById("display").value = "";
+        }
+        function calculate() {
+            try {
+                document.getElementById("display").value = eval(document.getElementById("display").value);
+            } catch (e) {
+                document.getElementById("display").value = "Error";
+            }
+        }
+    </script>
+
+</body>
+</html>
